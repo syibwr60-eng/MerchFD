@@ -11,18 +11,18 @@ export function HeroSection({ product }) {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_30%,rgba(255,122,0,0.24),transparent_24%),linear-gradient(180deg,rgba(10,10,10,0.02),rgba(10,10,10,0.72)_48%,rgba(10,10,10,0.96))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_65%_30%,rgba(255,122,0,0.28),transparent_24%),linear-gradient(180deg,rgba(10,10,10,0.04),rgba(10,10,10,0.7)_46%,rgba(10,10,10,0.96))]" />
         <img
           src={product.print}
           alt=""
           aria-hidden="true"
-          className="absolute right-[-26%] top-[8%] z-0 h-[50vh] w-[88vw] object-contain opacity-70 mix-blend-screen sm:right-[-10%] sm:top-[10%] sm:h-[48vh] sm:w-[46vw] lg:right-[2%] lg:top-[12%] lg:h-[52vh] lg:w-[28vw]"
+          className="absolute right-[-22%] top-[8%] z-0 h-[52vh] w-[88vw] object-contain opacity-82 mix-blend-screen sm:right-[-10%] sm:top-[10%] sm:h-[48vh] sm:w-[46vw] lg:right-[2%] lg:top-[12%] lg:h-[52vh] lg:w-[28vw]"
           loading="eager"
         />
         <img
           src={product.mockup}
           alt={product.name}
-          className="h-full w-full object-cover object-center opacity-86 blur-[1px]"
+          className="h-full w-full object-cover object-center opacity-88 blur-[1px]"
           loading="eager"
         />
       </motion.div>
@@ -33,30 +33,21 @@ export function HeroSection({ product }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-4 text-[10px] uppercase tracking-[0.38em] text-acid sm:mb-5 sm:text-[11px] sm:tracking-[0.45em]"
+            className="mb-4 text-[10px] uppercase tracking-[0.34em] text-acid sm:mb-5 sm:text-[11px] sm:tracking-[0.45em]"
           >
-            FunDuck / предложение по мерчу
+            <span className="whitespace-nowrap">FunDuck</span> / предложение по мерчу
           </motion.p>
 
-          <h1 className="max-w-6xl text-[24vw] font-semibold uppercase leading-[0.8] tracking-poster text-white sm:text-[14vw] lg:text-[9vw]">
-            {'FUNDUCK'.split('').map((char, index) => (
-              <motion.span
-                key={`${char}-${index}`}
-                className="inline-block"
-                initial={{ opacity: 0, y: '0.8em' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.2 + index * 0.06,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.22 }}
+            className="max-w-6xl whitespace-nowrap text-[24vw] font-semibold uppercase leading-[0.8] tracking-poster text-white sm:text-[14vw] lg:text-[9vw]"
+          >
+            FUNDUCK
+          </motion.h1>
 
-          <div className="mt-4 max-w-4xl text-[10vw] font-medium uppercase leading-[0.86] tracking-poster text-zinc-100 sm:mt-8 sm:text-[5vw] lg:text-[3.5vw]">
+          <div className="mt-4 max-w-4xl text-[10vw] font-medium uppercase leading-[0.86] tracking-poster text-acid drop-shadow-[0_0_24px_rgba(255,122,0,0.24)] sm:mt-8 sm:text-[5vw] lg:text-[3.5vw]">
             {heroText.split(' ').map((word, wordIndex) => (
               <span key={word} className="mr-[0.18em] inline-block overflow-hidden">
                 <motion.span
@@ -79,7 +70,7 @@ export function HeroSection({ product }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.75 }}
-            className="mt-5 max-w-[14rem] rounded-full border border-white/10 bg-black/40 px-4 py-3 text-[9px] uppercase tracking-[0.24em] text-zinc-200 backdrop-blur sm:max-w-xs sm:text-[10px] sm:tracking-[0.28em]"
+            className="mt-5 max-w-[14rem] rounded-full border border-acid/30 bg-black/45 px-4 py-3 text-[9px] uppercase tracking-[0.24em] text-zinc-100 backdrop-blur sm:max-w-xs sm:text-[10px] sm:tracking-[0.28em]"
           >
             Hero-модель: {product.name}
           </motion.div>
@@ -89,9 +80,9 @@ export function HeroSection({ product }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.75 }}
-          className="justify-self-end text-right"
+          className="justify-self-start text-left sm:justify-self-end sm:text-right"
         >
-          <div className="mt-4 text-[10px] uppercase tracking-[0.28em] text-zinc-500 sm:mt-6 sm:text-[11px] sm:tracking-[0.35em]">
+          <div className="mt-4 text-[10px] uppercase tracking-[0.28em] text-zinc-400 sm:mt-6 sm:text-[11px] sm:tracking-[0.35em]">
             Скролл, чтобы посмотреть коллекцию
           </div>
         </motion.div>

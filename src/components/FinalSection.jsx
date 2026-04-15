@@ -21,14 +21,12 @@ export function FinalSection() {
         <p className="text-[11px] uppercase tracking-[0.45em] text-acid">
           Финал
         </p>
-        <h2 className="mt-4 text-[24vw] font-semibold uppercase leading-[0.8] tracking-poster text-white sm:mt-5 sm:text-[16vw] lg:text-[11vw]">
-          FUN
-          <br />
-          DUCK
+        <h2 className="mt-4 whitespace-nowrap text-[20vw] font-semibold uppercase leading-[0.82] tracking-poster text-white sm:mt-5 sm:text-[16vw] lg:text-[11vw]">
+          FUNDUCK
         </h2>
         <div className="mt-6 flex flex-col gap-4 sm:mt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-lg text-sm leading-relaxed text-zinc-300 sm:text-lg">
-            FunDuck. Финальный экран предложения по мерчу.
+            <span className="whitespace-nowrap">FunDuck</span>. Финальный экран предложения по мерчу.
           </p>
           <a
             href="#products"
